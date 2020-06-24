@@ -93,7 +93,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     private static final int CONTEXTMENU_HELP_ID = 8;
     private static final int CONTEXTMENU_TOGGLE_KEEP_SCREEN_ON = 9;
 
-    private static final int MAX_SESSIONS = 9;
+    private static final int MAX_SESSIONS = 8;
 
     private static final int REQUESTCODE_PERMISSION_STORAGE = 1234;
 
