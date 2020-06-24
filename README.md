@@ -1,43 +1,42 @@
 # Termux application
 
-[![Build status](https://github.com/termux/termux-app/workflows/Build/badge.svg)](https://github.com/termux/termux-app/actions)
-[![Testing status](https://github.com/termux/termux-app/workflows/Unit%20tests/badge.svg)](https://github.com/termux/termux-app/actions)
-[![Join the chat at https://gitter.im/termux/termux](https://badges.gitter.im/termux/termux.svg)](https://gitter.im/termux/termux)
+[![构建信息](https://github.com/htname/termux-app/workflows/Build/badge.svg)](https://github.com/termux/termux-app/actions)
+[![测试信息](https://github.com/htname/termux-app/workflows/Unit%20tests/badge.svg)](https://github.com/termux/termux-app/actions)
+[![加入Termux讨论区 https://gitter.im/termux/termux](https://badges.gitter.im/termux/termux.svg)](https://gitter.im/termux/termux)
 
-[Termux](https://termux.com) is an Android terminal application and Linux environment.
+[Termux](https://termux.com) 是一个运行在Android的一个Linux系统环境工具。
 
 - [Termux Reddit community](https://reddit.com/r/termux)
 - [Termux Wiki](https://wiki.termux.com/wiki/)
 - [Termux Twitter](http://twitter.com/termux/)
 
-Note that this repository is for the app itself (the user interface and the
-terminal emulation). For the packages installable inside the app, see
+请注意，此存储库用于应用程序本身（用户界面和终端仿真）。
+有关可在应用程序内安装的软件包，请参见
 [termux/termux-packages](https://github.com/termux/termux-packages)
 
-## Installation
+## 安装
 
-Termux:Widget application can be obtained from:
+Termux:Widget 插件可以在这里下载:
 
 - [Google Play](https://play.google.com/store/apps/details?id=com.termux)
 - [F-Droid](https://f-droid.org/en/packages/com.termux/)
 - [Kali Nethunter Store](https://store.nethunter.com/en/packages/com.termux/)
 
-Additionally we provide per-commit debug builds for those who want to try
-out the latest features or test their pull request. This build can be obtained
-from one of the workflow runs listed on [Github Actions](https://github.com/termux/termux-app/actions)
-page.
+此外，我们为想要尝试的人提供每次提交调试版本
+淘汰最新功能或测试其提取请求。可以获得此版本
+从以下列出的工作流程之一运行 [Github Actions](https://github.com/htname/termux-app/actions)
+页面。
 
-Signature keys of all offered builds are different. Before you switch the
-installation source, you will have to uninstall the Termux application and
-all currently installed plugins.
-
-## Terminal resources
+所有提供的内部版本的签名密钥都不同。切换之前
+安装源，则必须卸载Termux应用程序，然后
+卸载所有当前安装的插件。
+## 终端引用
 
 - [XTerm control sequences](http://invisible-island.net/xterm/ctlseqs/ctlseqs.html)
 - [vt100.net](http://vt100.net/)
 - [Terminal codes (ANSI and terminfo equivalents)](http://wiki.bash-hackers.org/scripting/terminalcodes)
 
-## Terminal emulators
+## 终端模拟器
 
 - VTE (libvte): Terminal emulator widget for GTK+, mainly used in gnome-terminal.
   [Source](https://github.com/GNOME/vte), [Open Issues](https://bugzilla.gnome.org/buglist.cgi?quicksearch=product%3A%22vte%22+),
