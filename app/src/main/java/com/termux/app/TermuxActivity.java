@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
@@ -100,6 +101,8 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     private static final int REQUESTCODE_PERMISSION_STORAGE = 1234;
 
     private static final String RELOAD_STYLE_ACTION = "com.termux.app.reload_style";
+
+    private static final String BROADCAST_TERMUX_OPENED = "com.termux.app.OPENED";
 
     /** The main view of the activity showing the terminal. Initialized in onCreate(). */
     @SuppressWarnings("NullableProblems")
@@ -324,6 +327,26 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
         checkForFontAndColors();
 
         mBellSoundId = mBellSoundPool.load(this, R.raw.bell, 1);
+
+        sendOpenedBroadcast();
+    }
+
+    /**
+     * Send a broadcast notifying Termux app has been opened
+     */
+    void sendOpenedBroadcast() {
+        Intent broadcast = new Intent(BROADCAST_TERMUX_OPENED);
+        List<ResolveInfo> matches = getPackageManager().queryBroadcastReceivers(broadcast, 0);
+
+        // send broadcast to registered Termux receivers
+        // this technique is needed to work around broadcast changes that Oreo introduced
+        for (ResolveInfo info : matches) {
+            Intent explicitBroadcast = new Intent(broadcast);
+            ComponentName cname = new ComponentName(info.activityInfo.applicationInfo.packageName,
+                                                    info.activityInfo.name);
+            explicitBroadcast.setComponent(cname);
+            sendBroadcast(explicitBroadcast);
+        }
     }
 
     void toggleShowExtraKeys() {
@@ -861,7 +884,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
                     // The startActivity() call is not documented to throw IllegalArgumentException.
                     // However, crash reporting shows that it sometimes does, so catch it here.
                     new AlertDialog.Builder(this).setMessage(R.string.styling_not_installed)
-                        .setPositiveButton(R.string.styling_install, (dialog, which) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.termux.styling")))).setNegativeButton(android.R.string.cancel, null).show();
+                        .setPositiveButton(R.string.styling_install, (dialog, which) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://f-droid.org/en/packages/com.termux.styling/")))).setNegativeButton(android.R.string.cancel, null).show();
                 }
                 return true;
             }
