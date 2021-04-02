@@ -1,3 +1,4 @@
+未汉化
 # Termux API
 
 [![Build status](https://github.com/termux/termux-api/workflows/Build/badge.svg)](https://github.com/termux/termux-api/actions)
