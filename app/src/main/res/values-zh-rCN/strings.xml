@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Termux:Widget</string>
+    <string name="shortcut_widget_name">Termux 小部件</string>
+    <string name="single_shortcut_name">Termux 快捷方式</string>
+    <string name="no_shortcut_scripts">里面没有文件\n$HOME/.shortcuts/</string>
+    <string name="refresh">刷新</string>
+    <string name="termux">Termux</string>
+    <string name="scripts_reloaded">Termux 快捷脚本已刷新</string>
+    <string name="bad_token_message">这个快捷方式无效了 - 删掉它或者重新添加</string>
+
+</resources>
