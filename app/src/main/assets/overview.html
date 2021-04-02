@@ -1,3 +1,33 @@
+<li>中文
+
+<p>termux：boot附加组件提供了在设备启动时在termux下运行程序的功能。
+
+<h2>使用</h2>
+<ul>
+	<li>给自启动权限
+	<li>mkdir ~/.termux/boot
+	<li>把sh文件放进去
+	<li>如果有多个文件，它们将按排序顺序执行。
+	<li>请注意，先运行termux-wake-lock锁定自启
+</ul>
+
+<h2>例子</h2>
+<p>要启动sshd服务器并防止设备在启动时休眠，请在~/termux/boot/start-sshd中写入如下三行</p>
+
+<pre>
+    #!/data/data/com.termux/files/usr/bin/sh
+    termux-wake-lock
+    sshd
+</pre>
+
+<h2>学到更多</h2>
+<p>加入termux的Google+社区，网址为<a href="https://termux.com/community">https://termux.com/community</a>
+
+<h2>报告问题</h2>
+<p><a href="https://github.com/termux/termux-boot/issues">https://github.com/termux/termux-boot/issues</a>
+
+<li>ENGLISH
+
 <p>The Termux:Boot add-on provides functionality to run programs under Termux when the device boots up.
 
 <h2>Usage</h2>
