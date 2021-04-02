@@ -1,3 +1,4 @@
+仅汉化UI，修改默认快捷键
 # Termux application
 
 [![Build status](https://github.com/termux/termux-app/workflows/Build/badge.svg)](https://github.com/termux/termux-app/actions)
