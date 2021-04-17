@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_API_APP_NAME "Termux:API">
+    <!ENTITY TERMUX_BOOT_APP_NAME "Termux:Boot">
+    <!ENTITY TERMUX_FLOAT_APP_NAME "Termux:Float">
+    <!ENTITY TERMUX_STYLING_APP_NAME "Termux:Styling">
+    <!ENTITY TERMUX_TASKER_APP_NAME "Termux:Tasker">
+    <!ENTITY TERMUX_WIDGET_APP_NAME "Termux:Widget">
+    ]>
+
+<resources>
+
+    <!-- FileUtils -->
+    <string name="error_executable_required">请求可执行</string>
+    <string name="error_null_or_empty_parameter">%1$s 没有在 \"%2$s\" 中</string>
+    <string name="error_null_or_empty_regular_file_path">常规文件路径为null或为空。</string>
+    <string name="error_null_or_empty_regular_file">常规文件为null或为空。</string>
+    <string name="error_null_or_empty_executable_file_path">可执行文件路径为null或为空。</string>
+    <string name="error_null_or_empty_executable_file">可执行文件为null或为空。</string>
+    <string name="error_null_or_empty_directory_file_path">目录文件路径为null或为空。</string>
+    <string name="error_null_or_empty_directory_file">目录文件为null或为空。</string>
+
+    <string name="error_file_not_found_at_path">%1$s 不在路径 \"%2$s\" 中</string>
+    <string name="error_no_regular_file_found">常规文件不在 %1$s 路径中</string>
+    <string name="error_not_a_regular_file">%1$s 在 \"%2$s\" 目录的文件不是一个常规文件</string>
+    <string name="error_non_regular_file_found">非常规文在 %1$s 路径被发现</string>
+    <string name="error_non_directory_file_found">非目录文件在 %1$s 路径被发现</string>
+    <string name="error_non_symlink_file_found">非链接文件在 %1$s 目录被发现</string>
+	<string name="error_file_not_an_allowed_file_type">文件 %1$s 在 \"%2$s\" 不是一个允许的文件类型 \"%3$s\".</string>
+
+    <string name="error_validate_file_existence_and_permissions_failed_with_exception">Validating file existence and permissions of %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+    <string name="error_validate_directory_existence_and_permissions_failed_with_exception">Validating directory existence and permissions of %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+
+    <string name="error_creating_file_failed">Creating %1$s at path \"%2$s\" failed.</string>
+    <string name="error_creating_file_failed_with_exception">Creating %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+
+    <string name="error_cannot_overwrite_a_non_symlink_file_type">Cannot overwrite %1$s while creating symlink at \"%2$s\" to \"%3$s\" since destination file type \"%4$s\" is not a symlink.</string>
+    <string name="error_creating_symlink_file_failed_with_exception">Creating %1$s at path \"%2$s\" to \"%3$s\" failed.\nException: %4$s</string>
+
+    <string name="error_copying_or_moving_file_failed_with_exception">%1$s from \"%2$s\" to \"%3$s\" failed.\nException: %4$s</string>
+    <string name="error_copying_or_moving_file_to_same_path">%1$s from \"%2$s\" to \"%3$s\" cannot be done since they point to the same path.</string>
+    <string name="error_cannot_overwrite_a_different_file_type">Cannot overwrite %1$s while %2$s it from \"%3$s\" to \"%4$s\" since destination file type \"%5$s\" is different from source file type \"%6$s\".</string>
+    <string name="error_cannot_move_directory_to_sub_directory_of_itself">Cannot move %1$s from \"%2$s\" to \"%3$s\" since destination is a subdirectory of the source.</string>
+
+    <string name="error_file_still_exists_after_deleting">The %1$s still exists after deleting it from \"%2$s\".</string>
+    <string name="error_deleting_file_failed">Deleting %1$s at path \"%2$s\" failed.</string>
+    <string name="error_deleting_file_failed_with_exception">Deleting %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+    <string name="error_clearing_directory_failed_with_exception">Clearing %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+
+    <string name="error_reading_string_to_file_failed_with_exception">Reading string from %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+    <string name="error_writing_string_to_file_failed_with_exception">Writing string to %1$s at path \"%2$s\" failed.\nException: %3$s</string>
+    <string name="error_unsupported_charset">Unsupported charset \"%1$s\"</string>
+    <string name="error_checking_if_charset_supported_failed">Checking if charset \"%1$s\" is suppoted failed.\nException: %2$s</string>
+
+    <string name="error_invalid_file_permissions_string_to_check">The file permission string to check is invalid.</string>
+    <string name="error_file_not_readable">The %1$s at path is not readable. Permission Denied.</string>
+    <string name="error_file_not_writable">The %1$s at path is not writable. Permission Denied.</string>
+    <string name="error_file_not_executable">The %1$s at path is not executable. Permission Denied.</string>
+
+
+    <!-- PermissionUtils -->
+    <string name="message_sudo_please_grant_permissions">请在接下来屏幕中授权</string>
+    <string name="error_display_over_other_apps_permission_not_granted">&TERMUX_APP_NAME; 请求 \"在其他应用上显示\" 权限来从后台启动终端会话在 Android >= 10. 请在设置授权</string>
+
+
+
+    <!-- ShareUtils -->
+    <string name="title_share_with">分享给...</string>
+
+
+
+    <!-- TermuxUtils -->
+    <string name="msg_report_issue">如果您要报告此问题，请从选项菜单（右上角3点）复制其文本，然后在以下链接之一上发布问题。如果要发布在github上，则将其发布到报告所属的存储库中。您可以选择删除您认为不公开或不想共享或与问题无关的设备特定信息。</string>
+
+
+
+    <!-- ShellUtils -->
+    <string name="error_sending_sigkill_to_process">发送sigkill以应用户请求进行处理，或者因为android杀死了执行服务</string>
+    <string name="error_execution_cancelled">自执行服务被终止以来，执行已被取消</string>
+    <string name="error_failed_to_execute_termux_session_command">"Termux会话命令 \"%1$s\" 执行失败"</string>
+    <string name="error_failed_to_execute_termux_task_command">"Termux Task命令 \"%1$s\" 执行失败"</string>
+    <string name="error_exception_received_while_executing_termux_session_command">Exception received while to executing \"%1$s\" termux session command.\nException: %2$s</string>
+    <string name="error_exception_received_while_executing_termux_task_command">Exception received while to executing \"%1$s\" termux task command.\nException: %2$s"</string>
+
+
+
+    <!-- Log Level -->
+    <string name="log_level_title">日志等级</string>
+    <string name="log_level_off">"关闭"</string>
+    <string name="log_level_normal">"正常"</string>
+    <string name="log_level_debug">"调试"</string>
+    <string name="log_level_verbose">"详细"</string>
+    <string name="log_level_unknown">"*未知*"</string>
+    <string name="log_level_value">日志等级已设置为 \"%1$s\"</string>
+
+</resources>
