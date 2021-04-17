@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.termux">
+    <!ENTITY TERMUX_APP_NAME "Termux">
+    <!ENTITY TERMUX_API_APP_NAME "Termux:API">
+    <!ENTITY TERMUX_BOOT_APP_NAME "Termux:Boot">
+    <!ENTITY TERMUX_FLOAT_APP_NAME "Termux:Float">
+    <!ENTITY TERMUX_STYLING_APP_NAME "Termux:Styling">
+    <!ENTITY TERMUX_TASKER_APP_NAME "Termux:Tasker">
+    <!ENTITY TERMUX_WIDGET_APP_NAME "Termux:Widget">
+    <!ENTITY TERMUX_PROPERTIES_PRIMARY_PATH_SHORT "~/.termux/termux.properties">
+    ]>
+
+<resources>
+    <string name="application_name">&TERMUX_APP_NAME;</string>
+    <string name="shared_user_label">&TERMUX_APP_NAME; 用户</string>
+
+
+
+    <!-- Termux RUN_COMMAND permission -->
+	<string name="permission_run_command_label">在 &TERMUX_APP_NAME; 环境中运行命令</string>
+    <string name="permission_run_command_description">在 &TERMUX_APP_NAME; 环境中执行任意命令</string>
+
+
+
+    <!-- Termux Bootstrap Packages Installation -->
+    <string name="bootstrap_installer_body">正在安装引导包</string>
+    <string name="bootstrap_error_title">无法安装引导包</string>
+    <string name="bootstrap_error_body">&TERMUX_APP_NAME; 无法安装引导包</string>
+    <string name="bootstrap_error_abort">中止</string>
+    <string name="bootstrap_error_try_again">再次尝试</string>
+    <string name="bootstrap_error_not_primary_user_message">&TERMUX_APP_NAME; 只能以主要用户身份运行。\n为 &TERMUX_APP_NAME; 编译的引导程序包已经固定了 $PREFIX 目录，只能安装在 \"%1$s\" 目录下</string>
+
+
+
+    <!-- Terminal Sidebar and Shortcuts -->
+    <string name="action_new_session">新建会话</string>
+    <string name="action_new_session_failsafe">故障保护</string>
+    <string name="title_max_terminals_reached">哦嚯，会话太多了</string>
+    <string name="msg_max_terminals_reached">请先关闭无用会话</string>
+
+    <string name="title_rename_session">设置会话名</string>
+    <string name="action_rename_session_confirm">设置</string>
+    <string name="title_create_named_session">新建命名会话</string>
+    <string name="action_create_named_session_confirm">创建</string>
+
+    <string name="action_toggle_soft_keyboard">软键盘</string>
+
+    <string name="msg_enabling_terminal_toolbar">正在启动终端工具栏</string>
+    <string name="msg_disabling_terminal_toolbar">正在禁用终端工具栏</string>
+
+
+
+    <!-- Terminal Popup -->
+    <string name="action_select_url">选择URL</string>
+    <string name="title_select_url_dialog">单击URL复制，长按URL在浏览器打开</string>
+    <string name="title_select_url_none_found">终端没有URL</string>
+    <string name="msg_select_url_copied_to_clipboard">URL已复制</string>
+
+	<string name="action_share_transcript">分享终端文本</string>
+    <string name="title_share_transcript">终端文本</string>
+    <string name="title_share_transcript_with">将文本发送到:</string>
+
+    <string name="action_autofill_password">自动填充密码</string>
+
+    <string name="action_reset_terminal">重置终端</string>
+    <string name="msg_terminal_reset">终端已重置</string>
+
+    <string name="action_kill_process">中止进程 (%d)</string>
+    <string name="title_confirm_kill_process">可能会丢失数据，请三思</string>
+
+    <string name="action_style_terminal">样式</string>
+	<string name="action_toggle_keep_screen_on">屏幕常亮</string>
+    <string name="action_open_help">帮助</string>
+    <string name="action_open_settings">设置</string>
+    <string name="action_report_issue">报告问题</string>
+
+    <string name="error_styling_not_installed">&TERMUX_STYLING_APP_NAME; 插件未安装</string>
+    <string name="action_styling_install">安装</string>
+
+
+
+    <!-- Termux Notifications -->
+	<string name="notification_action_exit">退出</string>
+    <string name="notification_action_wake_lock">锁定后台</string>
+    <string name="notification_action_wake_unlock">取消锁定</string>
+
+
+
+    <!-- Termux RunCommandService -->
+    <string name="error_run_command_service_invalid_intent_action">无效的RunCommandService Intent活动信号: `%1$s`</string>
+    <string name="error_run_command_service_mandatory_extra_missing">RunCommandService缺少命令拓展参数: \"%1$s\"</string>
+    <string name="error_run_command_service_allow_external_apps_ungranted">RunCommandService 请求 `&TERMUX_PROPERTIES_PRIMARY_PATH_SHORT;` 文件内 `allow-external-apps` 参数设置为 `true`</string>
+    <string name="error_run_command_service_api_help">访问 %1$s 获取 RUN_COMMAND Intent 的使用方法</string>
+
+
+
+    <!-- Termux Execution Commands -->
+    <string name="msg_executable_absolute_path">可执行目录的绝对路径: \"%1$s\"</string>
+    <string name="msg_working_directory_absolute_path">工作目录的绝对路径: \"%1$s\"</string>
+
+
+
+    <!-- Termux Report And ShareUtils -->
+    <string name="action_copy">复制</string>
+    <string name="action_share">分享</string>
+
+    <string name="title_share_with">与...分享</string>
+    <string name="title_report_text">Report Text</string>
+
+
+
+    <!-- Termux File Receiver -->
+    <string name="title_file_received">文件保存在~/downloads/目录</string>
+    <string name="action_file_received_edit">编辑</string>
+    <string name="action_file_received_open_directory">打开目录</string>
+
+
+
+    <!-- Termux Settings -->
+    <string name="title_activity_termux_settings">&TERMUX_APP_NAME; 设置</string>
+
+    <!-- Debugging Preferences -->
+    <string name="debugging_preferences">排除故障</string>
+
+        <!-- Logging Category -->
+        <string name="logging_header">日志</string>
+
+            <!-- Terminal View Key Logging -->
+            <string name="terminal_view_key_logging_title">终端视图键记录</string>
+            <string name="terminal_view_key_logging_off">日志将不会包含终端视图键信息 (Default)</string>
+            <string name="terminal_view_key_logging_on">logcat日志将包含用于终端视图键的条目。这些都是非常冗长的，应在正常情况下禁用，否则会导致性能问题。</string>
+
+            <!-- Plugin Error Notifications -->
+            <string name="plugin_error_notifications_title">插件错误通知</string>
+            <string name="plugin_error_notifications_off">禁用闪烁和插件错误通知。</string>
+            <string name="plugin_error_notifications_on">显示闪烁和有关插件错误的通知  (默认) </string>
+
+            <!-- Crash Report Notifications -->
+            <string name="crash_report_notifications_title">崩溃报告通知</string>
+            <string name="crash_report_notifications_off">禁用崩溃报告通知。</string>
+            <string name="crash_report_notifications_on">显示崩溃报告的通知 (默认)</string>
+
+
+    <!-- Terminal IO Preferences -->
+    <string name="terminal_io_preferences">终端I/O</string>
+
+        <!-- Keyboard Category -->
+        <string name="keyboard_header">键盘</string>
+
+            <!-- Soft Keyboard -->
+            <string name="soft_keyboard_title">软键盘</string>
+			<string name="soft_keyboard_off">软键盘禁用</string>
+            <string name="soft_keyboard_on">软键盘启用 (默认)</string>
+
+</resources>
